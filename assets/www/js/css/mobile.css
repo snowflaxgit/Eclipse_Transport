@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+
+.center-wrapper{
+        text-align: center;
+        }
+        .center-wrapper * {
+        margin: 0 auto;
+        }
+.center-button{
+margin: 0 auto;
+}
+
+div.ui-input-text{
+	width:200px;
+}
+
+.ui-checkbox{
+	width:200px;
+}

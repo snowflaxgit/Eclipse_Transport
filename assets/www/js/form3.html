@@ -1,0 +1,574 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" href="css/mobile.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="js/jquery.address-1.5.min.js"></script>
+<script src="js/script.js"></script>
+
+</head>
+
+<body>
+ <div data-role="page"  id="home" data-theme="a" data-url="home">
+    	<div data-theme="a" style="text-align:center;height:45px;" data-role="header">
+               <center><div style="padding-top: 10px;">Mobile Application</div></center>
+         </div>
+         <div data-role="content" data-theme="a">
+         	<div data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+                <ul data-role="listview" data-inset="true" data-filter="false">
+                    <li><a id="li_header" href="#header_mark">Header Markierung</a></li>
+                    <li><a href="#long_mark">1. Temperaturmessungen</a></li>
+                    <li><a href="#pede_cross">2. Längsmarkierung</a></li>
+                    <li><a href="#">3. Fussgängerstreifen</a></li>
+                    <li><a href="#">4. Bushaltestellen</a></li>
+                    <li><a href="#">5. Seitenmarkierung</a></li>
+                    <li><a href="#">6. Verkehrsteiler</a></li>
+                    <li><a href="#regie">7. Regie Personal</a></li>
+                    <li><a href="#">8. Maschinen Fahrzeuge</a></li>
+                    <li><a href="#">9. Neueinträge</a></li>
+                    <li><a href="#">10. Material Entsorgung</a></li>
+				</ul>
+        	</div>  
+ 		 </div>
+    </div>
+   
+    
+    <!-- Header Page -->
+      <div id="header_mark" data-theme="a" data-role="page" data-url="header_mark" >
+      	<div data-theme="a" style="text-align:center;height: 45px;" data-role="header">
+              <a href="#popup" style="float:left" data-position-to="window" data-transition="pop" data-role="button" data-rel="popup" data-icon="info" data-iconpos="left" data-inline="true">Instuctions</a>
+           		<div data-role="popup" style="width: 500px;height: 150px; font-size:12px;" class="ui-content" id="popup" data-overlay-theme="a" data-theme="a" data-corners="false">
+   	 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>    	
+        			<div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="code" style="float:left" class="control-label">Code</label><br />
+                                        <div class="controls" style="padding-top: 13px;">
+                                            <label for="first_col" class="control-label" style="float:left" >FN New Color<br>
+																						 FU Color Maintenance<br>
+																						 DF Color Demarcation<br>
+																						 SN New Structure<br>
+																						 SU Structure Maintenance<br>
+																						 DS Demarcation Structure</label>
+                                             <label for="second_col" class="control-label" style="float:left;padding-left: 21px;" >Zn New spray plastic<br>
+																						 Zu Spray Plastic Maintenance<br>
+																						 DZ Demarcation Spray Plastic<br>
+																						 KN New Cold Plastic<br>
+																						 KU Cold Plastic Maintenance<br>
+																						 DK Demarcation Of Cold Plastic</label>
+                                        	<label for="third_col" class="control-label" style="float:right" >s Levels<br>
+																						 L Long Time Film<br>
+																						 W Heat Foil(Hot Tape)<br>
+																						 DF Demarcation Film<br>
+																						 SL Scotch - Lane<br>
+																						 g=yellow / w=white / r=red<br>
+																						 b=blue / r=red</label>                                                 
+                                        </div>
+                    </div>
+				</div>
+            <div style="padding-top: 10px;">Markierung</div>
+            <a href="#"  style="float:right" data-role="button" data-icon="arrow-u" data-iconpos="left" data-inline="true">Retrun to top</a>
+         </div>
+          <div data-role="content" data-theme="a">
+         	<div data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+				       <section id="header_mark_section" class="span7">
+                                 <h4>Arbeitsauftrag / Beförderungspapier ADR / Rapport </h4>
+
+                                <fieldset id="header_mark_field">
+                                    <div input="select" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="request_order_from" style="padding-right: 18px;" class="control-label">Anfrage /Auftrag vom:</label>
+                                          <input type="date" name="date" id="date" value=""  />
+                                         
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="client_name" class="control-label">Aufrtraggeber:</label>
+                                        <div class="controls">
+                                            <input type="text" size="10px" name="client_name" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="text" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="street" class="control-label">Strasse:</label>
+                                        <div class="controls">
+                                            <input type="text" name="street" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="zip" class="control-label">PLZ:</label>
+                                        <div class="controls">
+                                            <input type="text" name="zip" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="location" class="control-label">Ort:</label>
+                                        <div class="controls">
+                                            <input type="text" name="location" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="radio" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <div class="controls rad">
+                                            <input type="checkbox" class="checkbox" id="maintenance" name="maintenance" value="Maintenance"><label for="maintenance">Unterhalt</label>
+                                            <input type="checkbox" class="checkbox" id="construct_site" name="construct_site" value="Construction site"><label for="construct_site">Baustelle</label>
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="number" class="control-label">Nr.</label>
+                                        <div class="controls">
+                                            <input type="text" name="number" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                     <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="property" class="control-label">Objekt:</label>
+                                        <div class="controls">
+                                            <input type="text" name="property" class="span3 required qrnumber" /> 
+                                        </div>
+                                    </div>
+                                    <!-- Popu Div QR & Number  -->
+                                      <div data-role="popup" style="width: 200px;height: 200px; font-size:12px;" class="ui-content" id="qrpopup" data-overlay-theme="a" data-theme="a" data-corners="false">
+				   	 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>    	
+                                    	
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="payer_number" class="control-label">Kosten-träger Nr.</label>
+                                        <div class="controls">
+                                   			<fieldset class="ui-grid-b">
+                                            <div class="ui-block-a"> 
+                                            <input type="text" name="payer_number" class="span3 required qrcode" />
+                                        	</div>
+                                            <div class="ui-block-b"> 
+                                            	<a href="#qrpopup" data-position-to="origin"  data-rel="popup" style=""> <div data-role="button" style="width:75px; "> QR </div> </a>
+                                            </div">
+                                            </fieldset>
+                                        </div>
+                                        
+                                        
+                                    	
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="visa" class="control-label">Visum:</label>
+                                        <div class="controls">
+                                        	<label for="BL / L-BH"  class="control-label">BL / L-BH</label>
+                                            <input type="text"  name="BL" class="span3 required" />
+                                            <label for="DB"  class="control-label">DB</label>
+                                            <input type="text" name="DB" class="span3 required" />                                       
+                                            <label for="perform" class="control-label">Auszuführen bis:</label>
+                                          	 <input type="date" name="date" id="date" value=""  />	
+                                        </div>                                       
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="clerk" class="control-label">Sachbearbeiter:</label>
+                                        <div class="controls">
+                                            <input type="text" name="clerk" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="mobile_number" class="control-label">Mobile:</label>
+                                        <div class="controls">
+                                            <input type="text" name="mobile_number" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="telephone_number" class="control-label">Tel:</label>
+                                        <div class="controls">
+                                            <input type="text" name="telephone_number" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="meeting_point" class="control-label">Treffpunkt:</label>
+                                        <div class="controls">
+                                            <input type="text" name="meeting_point" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                     <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="tag" class="control-label">Tag:</label>
+                                        <div class="controls">
+                                            <input type="text"  name="tag" class="span3 required" />
+                                            <label for="date" class="control-label">Datum:</label>
+                                            <input type="date" name="date" id="date" value=""  />	
+                                        </div>
+                                         <div class="controls">
+                                            <label for="perform"  class="control-label">Zeit:</label>
+                                            <div class="date_time">
+                                              <div id="datetimepicker3" class="input-append time">
+                                                <input data-format="hh:mm:ss" type="text" ></input>
+                                                <span class="add-on">
+                                                  <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+                                                  </i>
+                                                </span>
+                                              </div>
+                                            </div> 
+                                        </div>           
+                                    </div>
+                                    
+                                     <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="fhz" class="control-label">Fhz.Nr.</label>
+                                        <div class="controls">
+                                            <input type="text" name="fhz" class="span3 required" />
+                                         	<label for="type" class="control-label">Typ:</label>
+                                          	<input type="text" name="type" class="span3 required" />
+                                            <label for="mileage" class="control-label">KmStand:</label>
+                                          	<input type="text" name="mileage" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <a href="#" style="float:right;" data-role="button" data-inline="true">Save</a>
+                                   
+                                </fieldset>
+                             </section>
+            </div>
+          </div>
+          <div data-role="footer" style="text-align:center;height:45px;" class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed"  data-theme="a" role="contentinfo">
+        	<a href="#" style="float:left;margin-top: 5px;" data-role="button" onClick="history.back();return false;" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev</a>
+            <a href="#home" class="ui-btn-center ui-btn-up-a" style="margin-top: 5px;" data-role="button" data-icon="home" data-iconpos="left" >Home</a>
+            <a href="#"  style="float:right;margin-top: 5px;"data-role="button" data-icon="arrow-r" data-iconpos="left" data-inline="true">Next</a>
+         </div>
+      </div>
+    
+   	<!-- number one Temperaturmessungen page -->
+    
+    <div id="long_mark" data-theme="a" data-role="page" data-url="long_mark" >
+      	<div data-theme="a" style="text-align: center;height: 45px;" data-role="header">
+        	     <a href="#popup" style="float:left" data-position-to="window" data-transition="pop" data-role="button" data-rel="popup" data-icon="info" data-iconpos="left" data-inline="true">Instuctions</a>
+           		<div data-role="popup" style="width: 500px;height: 150px; font-size:12px;" class="ui-content" id="popup" data-overlay-theme="a" data-theme="a" data-corners="false">
+   	 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>    	
+        			<div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="code" style="float:left" class="control-label">Code</label><br />
+                                        <div class="controls" style="padding-top: 13px;">
+                                            <label for="first_col" class="control-label" style="float:left" >FN New Color<br>
+																						 FU Color Maintenance<br>
+																						 DF Color Demarcation<br>
+																						 SN New Structure<br>
+																						 SU Structure Maintenance<br>
+																						 DS Demarcation Structure</label>
+                                             <label for="second_col" class="control-label" style="float:left;padding-left: 21px;" >Zn New spray plastic<br>
+																						 Zu Spray Plastic Maintenance<br>
+																						 DZ Demarcation Spray Plastic<br>
+																						 KN New Cold Plastic<br>
+																						 KU Cold Plastic Maintenance<br>
+																						 DK Demarcation Of Cold Plastic</label>
+                                        	<label for="third_col" class="control-label" style="float:right" >s Levels<br>
+																						 L Long Time Film<br>
+																						 W Heat Foil(Hot Tape)<br>
+																						 DF Demarcation Film<br>
+																						 SL Scotch - Lane<br>
+																						 g=yellow / w=white / r=red<br>
+																						 b=blue / r=red</label>                                                 
+                                        </div>
+                    </div>
+				</div>
+            <div style="padding-top: 10px;">Temperaturmessungen</div>
+            <a href="#"  style="float:right" data-role="button" data-icon="arrow-u" data-iconpos="left" data-inline="true">Retrun to top</a>
+              
+         </div>
+          <div data-role="content" data-theme="a">
+         	<div data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+				       <section id="long_mark_section" class="span7">
+                                 <h4>1. Messung </h4>
+
+                                <fieldset id="long_mark_field">
+                                    <div input="select" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="request_order_from" class="control-label">Datum:</label>
+                                          <input type="date" name="date" id="date" value=""  />	                                   	
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="client_name" class="control-label">H M</label>
+                                        <div class="controls">
+                                            <input type="text" name="client_name" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="text" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="street" class="control-label">Lufttemperatur 0C:</label>
+                                        <div class="controls">
+                                            <input type="text" name="street" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="zip" class="control-label">Untergrundtemperatur 0C:</label>
+                                        <div class="controls">
+                                            <input type="text" name="zip" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="location" class="control-label">Taupunkt 0C:</label>
+                                        <div class="controls">
+                                            <input type="text" name="location" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="location" class="control-label">Relative Luftfeuchtigkeit %</label>
+                                        <div class="controls">
+                                            <input type="text" name="location" class="span3 required" />
+                                        </div>
+                                    </div>
+                                    <a href="#" style="float:right;" data-role="button" data-inline="true">Save</a>
+                                </fieldset>
+                             </section>
+            </div>
+          </div>
+          <div data-role="footer" style="text-align:center;height:45px;" class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed"  data-theme="a" role="contentinfo">
+        	<a href="#" style="float:left;margin-top: 5px;" data-role="button" onClick="history.back();return false;" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev</a>
+            <a href="#home" class="ui-btn-center ui-btn-up-a" style="margin-top: 5px;" data-role="button" data-icon="home" data-iconpos="left" >Home</a>
+            <a href="#"  style="float:right;margin-top: 5px;"data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">Next</a>
+         </div>
+      </div>
+      
+      <!--number 2 Längsmarkierung -->
+       <div id="pede_cross" data-theme="a" data-role="page" data-url="pede_cross" >
+      	<div data-theme="a" style="text-align: center;height: 45px;" data-role="header">
+        	 <a href="#popup" style="float:left" data-position-to="window" data-transition="pop" data-role="button" data-rel="popup" data-icon="info" data-iconpos="left" data-inline="true">Instuctions</a>
+           		<div data-role="popup" style="width: 500px;height: 150px; font-size:12px;" class="ui-content" id="popup" data-overlay-theme="a" data-theme="a" data-corners="false">
+   	 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>    	
+        			<div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="code" style="float:left" class="control-label">Code</label><br />
+                                        <div class="controls" style="padding-top: 13px;">
+                                            <label for="first_col" class="control-label" style="float:left" >FN New Color<br>
+																						 FU Color Maintenance<br>
+																						 DF Color Demarcation<br>
+																						 SN New Structure<br>
+																						 SU Structure Maintenance<br>
+																						 DS Demarcation Structure</label>
+                                             <label for="second_col" class="control-label" style="float:left;padding-left: 21px;" >Zn New spray plastic<br>
+																						 Zu Spray Plastic Maintenance<br>
+																						 DZ Demarcation Spray Plastic<br>
+																						 KN New Cold Plastic<br>
+																						 KU Cold Plastic Maintenance<br>
+																						 DK Demarcation Of Cold Plastic</label>
+                                        	<label for="third_col" class="control-label" style="float:right" >s Levels<br>
+																						 L Long Time Film<br>
+																						 W Heat Foil(Hot Tape)<br>
+																						 DF Demarcation Film<br>
+																						 SL Scotch - Lane<br>
+																						 g=yellow / w=white / r=red<br>
+																						 b=blue / r=red</label>                                                 
+                                        </div>
+                    </div>
+				</div>
+            <div style="padding-top: 10px;">Längsmarkierung</div>
+            <a href="#"  style="float:right" data-role="button" data-icon="arrow-u" data-iconpos="left" data-inline="true">Retrun to top</a>
+              
+         </div>
+          <div data-role="content" data-theme="a">
+         	<div data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+				       <section id="pede_cross_section" class="span7">
+                                 <h4> </h4>
+
+                                <fieldset id="pede_cross_field">
+                                    <div input="select" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                       <label for="request_order_from" class="control-label">Markierungsart (immer ausfüllen):</label> 
+                                       <fieldset class="ui-grid-b">
+                                            <div class="ui-block-a">
+                                            <input type="text" name="client_name" class="span3 required qrcode" /> 
+                                        	</div>
+                                            <div class="ui-block-b"> 
+                                            	 <div data-role="button" style="width:75px; " onclick="{scanCode();}"> QR </div> 
+                                            </div">
+                                            </fieldset>
+                                                                          	
+                                    </div>                                    
+                                    
+                                    <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="client_name" class="control-label">Strassenzug - Nummer / KS Nr.:</label> 
+                                        <div class="controls">
+                                        <fieldset class="ui-grid-b">
+                                            <div class="ui-block-a">
+                                            <input type="text" name="of_marking" class="span3 required qrcode" /> 
+                                        	</div>
+                                            <div class="ui-block-b"> 
+                                            	 <div data-role="button" style="width:75px; " onClick="{scanCode();}"> QR </div> 
+                                            </div">
+                                            </fieldset>
+                                          
+                                        </div>
+                                    </div>
+                                    <!-- Popu Div QR & Number  -->
+                                      <div data-role="popup" style="width: 150px;height: 105px; font-size:12px;" class="ui-content" id="qrpopup" data-overlay-theme="a" data-theme="a" data-corners="false">
+				   	 				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>    	
+                                    	
+                                    </div>
+                                    <div input="text" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="street" class="control-label">Objekt - Nummer / Abschnitt - Nr.:</label>
+                                        <div class="controls">
+                                         	      	<div class="ui-grid-d ui-responsive">
+                                                <div class="ui-block-a"><div class="ui-body ui-body-d">
+                                                <select name="select-choice-1" id="select-choice-1">
+                                                    <option value="1.15">1.15</option>
+                                                    <option value="2.15">2.15</option>
+                                                    <option value="6.20">6.20</option>
+                                                    <option value="7.00">7.00</option>
+                                                    <option value="7.15">7.15</option>
+                                                    <option value="120.15">120.15</option>
+                                                    
+                                                </select>
+                                                </div></div>
+                                                <div class="ui-block-b"><div class="ui-body ui-body-d">
+                                                
+                                                	<select name="select-choice-1" id="select-choice-1">
+                                                    	<option value="w">w</option>
+                                                        <option value="g">g</option>
+                                                    </select>
+                                                     </div></div>
+                                                <div class="ui-block-c"><div class="ui-body ui-body-d">
+                                                
+                                                	<select name="select-choice-1" id="select-choice-1">
+                                                        <option value="Mittellinie">Mittellinie</option>
+                                                        <option value="Randlinie">Randlinie</option>
+                                                        <option value="Linie">Linie</option>
+                                                        <option value="Busstreifen">Busstreifen</option>
+                                                        <option value="Radwegbeschichtung">Radwegbeschichtung</option>
+                                                        <option value="Radstreifen">Radstreifen</option>                                                    
+                                                	</select>
+                                                    </div></div>
+                                                <div  class="ui-block-d">
+                                                     	<div class="ui-body-d">
+                                                       
+                                                       <select name="Services" id="Services" data-native-menu="false" data-mini="true" multiple="multiple" size="4">
+                                                            <option value="12"> [12] </option>
+                                                            <option value="15">[15]</option>
+                                                            <option value="20">[20]</option>
+                                                            <option value="25">[25]</option>
+                                                       </select>
+                                                   </div>
+                                                   </div>
+                                                <div class="ui-block-e"><div class="ui-body ui-body-d">
+                                                
+                                                	<select name="select-choice-1" id="select-choice-1">
+                                                        <option value="m">m</option>                                                                                                                                                               
+                                                	</select>  
+                                                     </div></div>
+                                                     
+                                                <!--<div class="ui-block-d"><div class="ui-body ui-body-d">
+                                                	
+                                                	<!--<select name="select-choice-1" id="select-choice-1" class="multiple" data-native-menu="false" data-mini="true" multiple="multiple">
+                                                        <option value="12">12</option>
+                                                        <option value="15">15</option>
+                                                        <option value="20">20</option>
+                                                        <option value="25">25</option>                                                                                                           
+                                                	</select>
+                                                     </div></div>-->
+                                            </div><!-- /grid-c -->
+                                        </div>
+                                    </div>
+                                    <a href="#" style="float:right;" data-role="button" data-inline="true">Save</a>
+                                </fieldset>
+                             </section>
+            </div>
+          </div>
+          <div data-role="footer" style="text-align:center;height:45px;" class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed"  data-theme="a" role="contentinfo">
+        	<a href="#" style="float:left;margin-top: 5px;" data-role="button" onClick="history.back();return false;" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev</a>
+            <a href="#home" class="ui-btn-center ui-btn-up-a" style="margin-top: 5px;" data-role="button" data-icon="home" data-iconpos="left" >Home</a>
+            <a href="#"  style="float:right;margin-top: 5px;" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">Next</a>
+         </div>
+      </div>
+      
+     <!--number 7 Regie • Personal-->
+       <div id="regie" data-theme="a" data-role="page" data-url="regie" >
+       <div data-theme="a" style="text-align: center;height: 45px;" data-role="header">
+          <a href="#popup" style="float:left" data-position-to="window" data-transition="pop" data-role="button" data-rel="popup" data-icon="info" data-iconpos="left" data-inline="true">Instuctions</a>
+             <div data-role="popup" style="width: 500px;height: 150px; font-size:12px;" class="ui-content" id="popup" data-overlay-theme="a" data-theme="a" data-corners="false">
+         <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>     
+           <div input="typeahead" class="control-group">
+                                        <div class="valid-ckeck"></div>
+                                        <label for="code" style="float:left" class="control-label">Code</label><br />
+                                        <div class="controls" style="padding-top: 13px;">
+                                            <label for="first_col" class="control-label" style="float:left" >FN New Color<br>
+                       FU Color Maintenance<br>
+                       DF Color Demarcation<br>
+                       SN New Structure<br>
+                       SU Structure Maintenance<br>
+                       DS Demarcation Structure</label>
+                                             <label for="second_col" class="control-label" style="float:left;padding-left: 21px;" >Zn New spray plastic<br>
+                       Zu Spray Plastic Maintenance<br>
+                       DZ Demarcation Spray Plastic<br>
+                       KN New Cold Plastic<br>
+                       KU Cold Plastic Maintenance<br>
+                       DK Demarcation Of Cold Plastic</label>
+                                         <label for="third_col" class="control-label" style="float:right" >s Levels<br>
+                       L Long Time Film<br>
+                       W Heat Foil(Hot Tape)<br>
+                       DF Demarcation Film<br>
+                       SL Scotch - Lane<br>
+                       g=yellow / w=white / r=red<br>
+                       b=blue / r=red</label>                                                 
+                                        </div>
+                    </div>
+                    </div>
+                            <div style="padding-top: 10px;">Regie Personal</div>
+                            <a href="#"  style="float:right" data-role="button" data-icon="arrow-u" data-iconpos="left" data-inline="true">Retrun to top</a>
+                              
+                         </div>
+                          <div data-role="content" data-theme="a">
+                          <div data-role="content" data-theme="a" class="ui-content ui-body-a" role="main">
+                           <section id="regie_section" class="span7">
+                                                 <h4> </h4>
+                
+                                                <fieldset id="regie_field">
+                                                 <a href="#" style="float:left;" data-role="button" data-inline="true">Add</a><br/>
+                                                    <div data-theme="a" style="margin-top: 41px;" class="ui-grid-b ui-responsive">
+                    <div class="ui-block-a"><div class="ui-body ui-body-d">• Regie • Personal</div></div>
+                    <div class="ui-block-b"><div class="ui-body ui-body-d">Bezeichnung · Tätigkeit</div></div>
+                    <div class="ui-block-c"><div class="ui-body ui-body-d">H M</div></div>
+                </div>
+                 <div class="ui-grid-b ui-responsive">
+                    <div class="ui-block-a"><div class="ui-body ui-body-d"><input id="text1" type="text" value="" /></div></div>
+                    <div class="ui-block-b"><div class="ui-body ui-body-d"><input id="text2" type="text" value="" /></div></div>
+                    <div class="ui-block-c"><div class="ui-body ui-body-d"><input id="text3" type="text" value="" /></div></div>
+                </div>
+                
+                                                    <a href="#" style="float:right;" data-role="button" data-inline="true">Save</a>
+                                                </fieldset>
+                                             </section>
+                            </div>
+                          </div>
+                          <div data-role="footer" style="text-align:center;height:45px;" class="ui-footer ui-bar-a ui-footer-fixed slideup" data-position="fixed"  data-theme="a" role="contentinfo">
+                         <a href="#" style="float:left;margin-top: 5px;" data-role="button" onClick="history.back();return false;" data-icon="arrow-l" data-iconpos="left" data-inline="true">Prev</a>
+                            <a href="#home" class="ui-btn-center ui-btn-up-a" style="margin-top: 5px;" data-role="button" data-icon="home" data-iconpos="left" >Home</a>
+                            <a href="#"  style="float:right;margin-top: 5px;" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true">Next</a>
+                         </div>
+      </div>
+      
+      
+</body>
+</html>
